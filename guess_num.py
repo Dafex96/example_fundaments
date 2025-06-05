@@ -1,10 +1,13 @@
 from random import randint
 
-num1 = int(input("Insert a number between 1 and 10: "))
+while True:
+    try:
+        num1 = int(input("Guess a number between 1 and 10: "))
+        break
+    except ValueError:
+        print("You should enter a number, try again")
 
 num2 = randint(1,10)
-
-
 
 try:
     while num1 == num2:

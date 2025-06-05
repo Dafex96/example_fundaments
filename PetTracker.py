@@ -1,21 +1,30 @@
-
 while True:
     try:
-        print("--PetTracker--")
-        
-        print("1) Dog")
-        print("2) Cat")
-        print("3) Hamster")
-        
+        amount = int(input("¿How many pets do you want to register?: "))
+        break
+    except ValueError:
+        print("You need to insert a number")
+
+plus_5 = 0
+eq_less_5 = 0
+
+for _ in range(amount):
+    pet_race = input("Insert the race of the animal: ")
+    valid = False
+    while not valid:
         try:
-            pet = int(input("Insert the type of pet do you have: "))
+            age = int(input("Insert the age of your pet: "))
+            valid = True
         except ValueError:
-            print("You need to insert a number")
-        pet_name = input("Insert the name of your pet: ")
-        
-        pet_age = int(input("Insert the age of your pet: "))
-        
-        vac = int(input("¿Is your pet vaccinated? (1:Yes, 2:No): "))
-        
-    except:
-        print("end")
+            print("The age should be a number")
+    if age > 5:
+        print(f"The race of the pet is: {pet_race}")
+        print("Your pet should have vaccine type B")
+        plus_5 += 1    ##The same as: plus_5 = plus_5 + 1##
+    else:
+        print(f"The race of the pet is: {pet_race}")
+        print("Your pet should have vaccine type A")
+        eq_less_5 += 1   ##The same as: plus_5 = plus_5 + 1##
+
+print(f"There are {plus_5} pets with more than 5 years")
+print(f"There are {eq_less_5} pets with 5 years or less")
