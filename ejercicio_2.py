@@ -1,21 +1,21 @@
 def menu():
     print("//-Cine Colo-Colo-\\")
-    print("¡Bienvenido al Cine Colo-Colo!")
+    print("¡Welcome to Colo-Colo Cinema!")
     print(" ")
-    print("1) Ver stock de entradas")
+    print("1) See tickets stock")
     print(" ")
-    print("2) Comprar entradas")
+    print("2) Buy tickets")
     print(" ")
-    print("3) Salir")
+    print("3) Quit")
     print(" ")
 
 while True:
     try:
         menu()
-        opc = int(input("Ingrese la opcion que desea: "))
+        opc = int(input("Insert an option: "))
         break
     except ValueError:
-        print("Debe ingresar una opcion valida, intente nuevamente")
+        print("You must enter a valid option, try again.")
         print(" ")
 
 stock = 50
@@ -24,47 +24,47 @@ while True:
     if opc == 1:
         try:
             
-            print(f"El stock de entradas es de {stock}")
+            print(f"The ticket stock is {stock}")
             print(" ")
             menu()
-            opc = int(input("Ingrese la opcion que desea: "))
+            opc = int(input("Insert an option: "))
             
         except ValueError:
-            print("Debe ingresar una opcion valida, intente nuevamente")
+            print("You must enter a valid option, try again.")
         
     elif opc == 2:
         try:
         
             print(" ")
-            compra = int(input("¿Cuantas entradas desea comprar? "))
-            stock = stock - compra
+            buy = int(input("How many tickets do you want to buy? "))
+            stock = stock - buy
             
-            while compra > stock:
+            while buy > stock:
                 stock = 50
-                print("¡Estas comprando mas entradas de las que hay!")
-                print(f"¡Solo hay {stock} entradas!")
-                compra = int(input("¿Cuantas entradas desea comprar? "))
-                stock = stock - compra
-            print(f"¡Compra satisfactoria! Quedan {stock} entradas.")
+                print("¡There are not that many tickets!")
+                print(f"¡There are just {stock} tickets!")
+                buy = int(input("How may tickets do you want to buy? "))
+                stock = stock - buy
+            print(f"¡Successful purchase! There are {stock} tickets left.")
             print(" ")
             menu()
-            opc = int(input("Ingrese la opcion que desea: "))
+            opc = int(input("Insert an option: "))
         
         except ValueError:
-            print("Debe ingresar un numero entero, intente nuevamente")
+            print("You must enter a valid option, try again.")
         
     elif opc == 3:
         print("------------------------------")
-        print("¡Muchas gracias, hasta pronto!")
+        print("¡Thank you, see you soon!")
         print("------------------------------")
         break
     else:
         try:
             
-            print("Opcion ingresada no valida, intente nuevamente ")
+            print("You must enter a valid option, try again.")
             print(" ")
             menu()
-            opc = int(input("Ingrese la opcion que desea: "))
+            opc = int(input("Insert an option: "))
             
         except ValueError:
-            print("Debe ingresar un numero entero, intente nuevamente")
+            print("You need to enter a whole number, try again.")
