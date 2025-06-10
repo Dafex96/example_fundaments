@@ -1,15 +1,24 @@
+
+### //Project not finished 
+
+
 import random
 
 rps = ["rock", "paper", "scissors"]
 
-user = input("Choose rock, paper or scissors: ").lower()
-
 while True:
-    if user not in rps:
-        print("You need to enter one of the three options")
+    try:
         user = input("Choose rock, paper or scissors: ").lower()
-    else:
         break
+    except:
+        print("You need to enter one of the three options")
+
+# while True:
+#     if user not in rps:
+#         print("You need to enter one of the three options")
+#         user = input("Choose rock, paper or scissors: ").lower()
+#     else:
+#         break
 
 ai = random.choice(rps)
 
