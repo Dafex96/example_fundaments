@@ -25,3 +25,4 @@ while True:
         h_a = input("Do you want the home or away version?: ")
         quant = int(input("How many shirts do you want?: "))
         print(f"Purchase successful! You bought {quant} {h_a} version shirts")
+        break
