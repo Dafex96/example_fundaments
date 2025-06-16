@@ -23,11 +23,65 @@ while True:
 while True:
     if user == 1:
         h_a = input("Do you want the home or away version?: ")
-        quant = int(input("How many shirts do you want?: "))
-        print(f"Purchase successful! You bought {quant} {h_a} version shirts")
-        break
+        try:
+            quant = int(input("How many shirts do you want?: "))
+        except ValueError:
+            print("You need to enter a valid option, try again.")
+        print(" ")
+        print(f"Purchase successful! You bought {quant} {teams[0]} {h_a} version shirts")
+        print(" ")
+        menu()
+        user = int(input("Choose your team: "))
     elif user == 2:
         h_a = input("Do you want the home or away version?: ")
-        quant = int(input("How many shirts do you want?: "))
-        print(f"Purchase successful! You bought {quant} {h_a} version shirts")
+        try:
+            quant = int(input("How many shirts do you want?: "))
+        except ValueError:
+            print("You need to enter a valid option, try again.")
+        print(" ")
+        print(f"Purchase successful! You bought {quant} {teams[1]} {h_a} version shirts")
+        print(" ")
+        menu()
+        user = int(input("Choose your team: "))
+    elif user == 3:
+        h_a = input("Do you want the home or away version?: ")
+        try:
+            quant = int(input("How many shirts do you want?: "))
+        except ValueError:
+            print("You need to enter a valid option, try again.")
+        print(" ")
+        print(f"Purchase successful! You bought {quant} {teams[2]} {h_a} version shirts")
+        print(" ")
+        menu()
+        user = int(input("Choose your team: "))
+    elif user == 4:
+        h_a = input("Do you want the home or away version?: ")
+        try:
+            quant = int(input("How many shirts do you want?: "))
+        except ValueError:
+            print("You need to enter a valid option, try again.")
+        print(" ")
+        print(f"Purchase successful! You bought {quant} {teams[3]} {h_a} version shirts")
+        print(" ")
+        menu()
+        user = int(input("Choose your team: "))
+    elif user == 5:
+        h_a = input("Do you want the home or away version?: ")
+        try:
+            quant = int(input("How many shirts do you want?: "))
+        except ValueError:
+            print("You need to enter a valid option, try again.")
+        print(" ")
+        print(f"Purchase successful! You bought {quant} {teams[4]} {h_a} version shirts")
+        print(" ")
+        menu()
+        user = int(input("Choose your team: "))
+    elif user == 6:
+        print("Goodbye, See you soon!")
         break
+    else:
+        print("Invalid option, try again.")
+        menu()
+        user = int(input("Choose your team: "))
+
+#Uknown error :(  ,  to be fixed...
