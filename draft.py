@@ -22,9 +22,70 @@ def menu():
 
 menu()
 
+option = 0
+num1 = 0
+num2 = 0
+
+
 while True:
     try:
         option = int(input("Insert an option: "))
         break
     except ValueError:
         print("Invalid option, try again.")
+
+while option > 0 and option < 6:
+    if option == 1:
+        
+        print("--Addition--")
+        num1 = int(input("Insert the first number: "))
+        num2 = int(input("Insert the second number: "))
+        ans = num1 + num2
+        
+        print(f"The answer is: {ans}")
+        
+        menu()
+        option = int(input("Insert an option: "))
+        
+    elif option == 2:
+        
+        print("--Subtraction--")
+        num1 = int(input("Insert the first number: "))
+        num2 = int(input("Insert the second number: "))
+        ans = num1 - num2
+        
+        print(f"The answer is: {ans}")
+        menu()
+        
+        option = int(input("Insert an option: "))
+        
+    elif option == 3:
+        
+        print("--Multiplication--")
+        num1 = int(input("Insert the first number: "))
+        num2 = int(input("Insert the second number: "))
+        ans = num1 * num2
+        
+        print(f"The answer is: {ans}")
+        menu()
+        
+        option = int(input("Insert an option: "))
+        
+    elif option == 4:
+        
+        print("--Division--")
+        num1 = int(input("Insert the first number: "))
+        num2 = int(input("Insert the second number: "))
+        ans = num1 // num2
+        
+        print(f"The answer is: {ans}")
+        menu()
+        
+        option = int(input("Insert an option: "))
+        
+    elif option == 5:
+        
+        print("Thank you, see you soon")
+        
+    else:
+        print("Invalid option, try again")
